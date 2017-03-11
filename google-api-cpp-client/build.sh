@@ -13,3 +13,4 @@ make -j${CPU_COUNT} all
 
 make install
 
+cp -r include/* ${PREFIX}/include/
