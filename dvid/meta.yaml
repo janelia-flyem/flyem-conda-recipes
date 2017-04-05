@@ -9,13 +9,11 @@ source:
   md5: a4ff1e9cd5024f9b79140b7e099d1896 # [linux]
 
 build:
-  number: 1
+  number: 2
 
 requirements:
-  build:
-
   run:
-    -snappy
+    - snappy
 
 about:
   home: http://github.com/janelia-flyem/dvid
