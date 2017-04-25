@@ -6,7 +6,7 @@ source:
   url: https://github.com/janelia-flyem/dvid/releases/download/v0.8.12/dvid-mac-v0.8.12.tar.gz # [osx]
   md5: 8aaa93d52d0a9354b484cd7cd4ad1a4f # [osx]
   url: https://github.com/janelia-flyem/dvid/releases/download/v0.8.12/dvid-linux-v0.8.12.tar.gz # [linux]
-  md5: d41d8cd98f00b204e9800998ecf8427e # [linux]
+  md5: d757aa00327bc31d61d4d13c15c21484 # [linux]
 
 build:
   number: 4
