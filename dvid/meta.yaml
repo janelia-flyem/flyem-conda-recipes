@@ -1,15 +1,15 @@
 package:
   name: dvid
-  version: "0.8.11"
+  version: "0.8.12"
 
 source:
-  url: https://github.com/janelia-flyem/dvid/releases/download/v0.8.11/dvid-mac-v0.8.11.tar.gz # [osx]
-  md5: 7ea061cba0e40d0ae27ce92b5378a4aa # [osx]
-  url: https://github.com/janelia-flyem/dvid/releases/download/v0.8.11/dvid-linux-v0.8.11.tar.gz # [linux]
-  md5: d170fe3aee617e409bb251b6e9a66014 # [linux]
+  url: https://github.com/janelia-flyem/dvid/releases/download/v0.8.12/dvid-mac-v0.8.12.tar.gz # [osx]
+  md5: 8aaa93d52d0a9354b484cd7cd4ad1a4f # [osx]
+  url: https://github.com/janelia-flyem/dvid/releases/download/v0.8.12/dvid-linux-v0.8.12.tar.gz # [linux]
+  md5: d41d8cd98f00b204e9800998ecf8427e # [linux]
 
 build:
-  number: 3
+  number: 4
 
 requirements:
   run:
