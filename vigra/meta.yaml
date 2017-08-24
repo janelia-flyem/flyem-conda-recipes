@@ -15,9 +15,9 @@ package:
 source:
   git_url: https://github.com/ukoethe/vigra
   git_tag: HEAD
-
+  
 build:
-  number: 2
+  number: 5
 
   #
   # You must build this recipe using 'conda build --numpy=X.Y'
@@ -30,34 +30,31 @@ build:
 requirements:
   build:
     - gcc 4.8.5 # [linux]
-    - gcc 4.8.5 # [osx]
     - python 2.7*|3.5*|3.6*
     - python {{PY_VER}}*
     - numpy >=1.9,{{NPY_VER}}*
-    - jpeg     8d
+    - jpeg     9b
     - libtiff  4.0.6
-    - libpng   1.6.17
+    - libpng   1.6.27
     - fftw     3.3*
     - hdf5     1.8.17
     - h5py
-    - boost    1.55.0 # [py2k]
-    - boost    1.60.0 # [py3k]
+    - boost    1.63.0
     - lemon    1.2.4
     - zlib     1.2*
     - nose
 
   run:
-    - libgcc   4.8*
+    - libgcc   4.8* # [linux]
     - python {{PY_VER}}*
     - numpy  {{NPY_VER}}*
-    - jpeg     8d
+    - jpeg     9*
     - libtiff  4.0.6   # libtiff version must exactly match from the build (on osx, at least)
-    - libpng   1.6.17
+    - libpng   >=1.6.27,<1.7
     - fftw     3.3*
     - hdf5     1.8.17
     - h5py
-    - boost    1.55.0 # [py2k]
-    - boost    1.60.0 # [py3k]
+    - boost    1.63.0
     - lemon    1.2.4
     - zlib     1.2*
     - nose

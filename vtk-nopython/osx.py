@@ -11,8 +11,8 @@ LIBVTK = join(PREFIX, 'lib/vtk-5.10')
 
 # Use the prefix python to locate the vtk python package (it resides in an egg)
 PREFIX_PYTHON = join(PREFIX, 'bin/python')
-SP_VTK = subprocess.check_output(
-    [PREFIX_PYTHON, "-c", "import imp; print imp.find_module('vtk')[1]"]).strip()
+# SP_VTK = subprocess.check_output(
+#     [PREFIX_PYTHON, "-c", "import imp; print imp.find_module('vtk')[1]"]).strip()
 
 def ch_link_libvtk(path, load_command):
     link = load_command['name']
@@ -70,10 +70,10 @@ def main():
         if macho.is_macho(path):
             macho.install_name_change(path, ch_link_bin)
 
-    for fn in os.listdir(SP_VTK):
-        path = join(SP_VTK, fn)
-        if macho.is_macho(path):
-            macho.install_name_change(path, ch_link_spvtk)
+#     for fn in os.listdir(SP_VTK):
+#         path = join(SP_VTK, fn)
+#         if macho.is_macho(path):
+#             macho.install_name_change(path, ch_link_spvtk)
 
 if __name__ == '__main__':
     main()
