@@ -23,17 +23,17 @@ requirements:
   build:
     - cmake
     - jpeg 9b
-    - libpng >=1.6.27
+    - libpng 1.6.28
     - libtiff 4.0*
-    - zlib
+    - zlib 1.2.*
     - libxml2
     - qt 4.8*
 
   run:
     - jpeg 9*
-    - libpng >=1.6.27,<1.7
+    - libpng >=1.6.28,<1.7
     - libtiff 4.0*
-    - zlib
+    - zlib 1.2.*
     - libxml2
     - qt 4.8*
 
