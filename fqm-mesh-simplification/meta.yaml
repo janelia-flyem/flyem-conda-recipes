@@ -1,0 +1,27 @@
+package:
+  name: fqm-mesh-simplification
+  version: 0.0
+
+source:
+  # Note: This repo contains no build instructions and no Unix Makefiles
+  #       Instead, pre-built binaries are present in the git repo.
+  #       It isn't even clear how they built it for Mac and Linux,
+  #       the binaries might have been generated from the pascal port:
+  #       https://github.com/neurolabusc/Fast-Quadric-Mesh-Simplification-Pascal-
+  git_url: https://github.com/sp4cerat/Fast-Quadric-Mesh-Simplification
+  git_tag: 4db71472e139bbf865bb09d8f1a4abe795005a14
+
+
+build:
+  # No real build -- just copy the binaries from the git repo.
+  script: cp bin.Linux/simplify {{PREFIX}}/bin && chmod +x {{PREFIX}}/bin/simplify # [linux]
+  script: cp bin.OSX/simplify {{PREFIX}}/bin && chmod +x {{PREFIX}}/bin/simplify # [osx]
+  
+test:
+  commands:
+    - simplify
+
+about:
+  home: https://github.com/sp4cerat/Fast-Quadric-Mesh-Simplification
+  license: MIT
+  summary: Mesh triangle reduction using quadrics
