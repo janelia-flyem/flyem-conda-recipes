@@ -13,6 +13,9 @@ source:
 
 
 build:
+  number: 0
+  string: {{PKG_BUILDNUM}}
+
   # No real build -- just copy the binaries from the git repo.
   script: cp bin.Linux/simplify {{PREFIX}}/bin && chmod +x {{PREFIX}}/bin/simplify # [linux]
   script: cp bin.OSX/simplify {{PREFIX}}/bin && chmod +x {{PREFIX}}/bin/simplify # [osx]
