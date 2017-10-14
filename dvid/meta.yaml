@@ -1,15 +1,18 @@
+{% set version = "0.8.13" %}
+
 package:
   name: dvid
-  version: "0.8.12"
+  version: {{version}}
 
 source:
-  url: https://github.com/janelia-flyem/dvid/releases/download/v0.8.12/dvid-mac-v0.8.12.tar.gz # [osx]
-  md5: 8aaa93d52d0a9354b484cd7cd4ad1a4f # [osx]
-  url: https://github.com/janelia-flyem/dvid/releases/download/v0.8.12/dvid-linux-v0.8.12.tar.gz # [linux]
-  md5: d757aa00327bc31d61d4d13c15c21484 # [linux]
+  url: https://github.com/janelia-flyem/dvid/releases/download/v{{version}}/dvid-mac-v{{version}}.tar.gz # [osx]
+  url: https://github.com/janelia-flyem/dvid/releases/download/v{{version}}/dvid-linux-v{{version}}.tar.gz # [linux]
+
+  md5: 579a5a76241a137a160794fb598f6795 # [osx]
+  #md5: FIXME # [linux]
 
 build:
-  number: 4
+  number: 0
 
 requirements:
   run:
