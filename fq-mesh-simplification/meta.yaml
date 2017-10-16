@@ -17,12 +17,13 @@ build:
   string: {{PKG_BUILDNUM}}
 
   # No real build -- just copy the binaries from the git repo.
-  script: cp bin.Linux/simplify {{PREFIX}}/bin && chmod +x {{PREFIX}}/bin/simplify # [linux]
-  script: cp bin.OSX/simplify {{PREFIX}}/bin && chmod +x {{PREFIX}}/bin/simplify # [osx]
+  # Also, give it a more descriptive name
+  script: cp bin.Linux/simplify {{PREFIX}}/bin/fq-mesh-simplify && chmod +x {{PREFIX}}/bin/fq-mesh-simplify # [linux]
+  script: cp bin.OSX/simplify {{PREFIX}}/bin/fq-mesh-simplify && chmod +x {{PREFIX}}/bin/fq-mesh-simplify # [osx]
   
 test:
   commands:
-    - simplify
+    - fq-mesh-simplify
 
 about:
   home: https://github.com/sp4cerat/Fast-Quadric-Mesh-Simplification
