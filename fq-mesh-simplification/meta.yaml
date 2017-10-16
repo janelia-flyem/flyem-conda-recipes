@@ -1,5 +1,5 @@
 package:
-  name: fqm-mesh-simplification
+  name: fq-mesh-simplification
   version: 0.0
 
 source:
