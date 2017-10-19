@@ -1,0 +1,16 @@
+package:
+  name: gsutil-env
+  version: 0.0
+
+requirements:
+  run:
+    - python
+
+about:
+  summary: |
+    Google's gsutil command can only be installed to a Python 2 environment.
+    This conda package makes gsutil available to Python 3 users.
+    It will create a NEW Python 2 environment (if it doesn't exist already),
+    install gsutil into it, and then add that environment's bin directory to
+    the current PATH, AFTER the current environment's own bin directory.
+    This is all achieved through some post-link.sh and activate.d hackery.
