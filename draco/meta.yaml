@@ -1,0 +1,30 @@
+{% set version = "1.0.1" %}
+
+package:
+  name: draco
+  version: "{{ version }}"
+
+source:
+  url: https://github.com/google/draco/archive/{{ version }}.zip
+  fn:  draco-{{ version }}.zip
+  #sha256: 6f040a54c4506a7e8cd1f3c94e15109dcf91504c99f67cfca4cc0aaf95c78c5b # 1.0.0 -- has cmake problem
+  sha256: 41f35d2e03d33e53d28759f594614df0038fcda645a3fcc7f26dad92f1dd64ae # 1.0.1
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - cmake
+
+test:
+  commands:
+    - draco_encoder -h
+    - draco_decoder -h
+
+about:
+  home: https://github.com/google/draco
+  license: MIT
+  summary: >
+    Draco is a library for compressing and decompressing 3D geometric meshes and point clouds.
+    It is intended to improve the storage and transmission of 3D graphics.
