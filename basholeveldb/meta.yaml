@@ -1,0 +1,22 @@
+package:
+  name: basholeveldb
+  version: 2.0.29
+
+build:
+  number: 0
+
+source:
+  # Janelia cached version has minor modifications from the original basho source.
+  # See README.DVID for details
+  url: http://janelia-flyem.github.io/downloads/basholeveldb-2.0.29.tar.gz
+  fn:  basholeveldb-2.0.29.tar.gz
+  md5: 8839a580b2ed58331a7c8053aee3ab1a
+
+requirements:
+  build:
+    - toolchain # From conda-forge. Sets environment variables like CC, CXX, MACOSX_DEPLOYMENT_TARGET, etc.
+
+about:
+  home: https://github.com/basho/leveldb
+  license: BSD 3-clause
+  summary: A key-value store
