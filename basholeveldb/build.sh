@@ -9,7 +9,11 @@ fi
 # Build
 make
 
-# Install (with symlinks)
+# Install headers
+mkdir -p ${PREFIX}/include
+cp -r include/leveldb ${PREFIX}/include
+
+# Install lib (with symlinks)
 mkdir -p ${PREFIX}/lib
 cp libleveldb.${EXT}.1.9 ${PREFIX}/lib/
 cd ${PREFIX}/lib/ && ln -s libleveldb.${EXT}.1.9 libleveldb.${EXT}.1 && cd -
