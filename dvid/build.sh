@@ -1,16 +1,27 @@
 #!/bin/bash
 
-export GOPATH=${PREFIX}/gopath
-mkdir -p ${GOPATH}
+# GOPATH is just the build 'work' dir 
+export GOPATH=$(pwd)
 
 DVID_REPO=${GOPATH}/src/github.com/janelia-flyem/dvid
-mkdir -p $(dirname ${DVID_REPO})
 
-cp -r ${SRC_DIR} ${DVID_REPO}
+#mkdir -p $(dirname ${DVID_REPO})
+#cp -r ${SRC_DIR} ${DVID_REPO}
+
 cd ${DVID_REPO}
 
+##
+## Original CMakelists.txt used a GO_GET variable.
+## Is it needed here?
+##
+
+##
+## All of these 'go get' commands should be fast, becuase we already pre-fetched the sources.
+## See meta.yaml
+##
+
 # gopackages
-go get -u github.com/janelia-flyem/go
+go get github.com/janelia-flyem/go
 cd ${GOPATH}/src/github.com/janelia-flyem/go
 git submodule init
 git submodule update
@@ -56,8 +67,9 @@ go get github.com/gogo/protobuf/proto
 go get github.com/gogo/protobuf/gogoproto
 go get github.com/gogo/protobuf/protoc-gen-gogoslick
 
-# nrsc
-#go build -o ${BUILDEM_BIN_DIR}/nrsc
+# nrsc -- unused?
+#cd ${GOPATH}/src/github.com/janelia-flyem/go/nrsc/nrsc
+#go build -o ${PREFIX}/nrsc
 
 # gofuse
 go get bazil.org/fuse
