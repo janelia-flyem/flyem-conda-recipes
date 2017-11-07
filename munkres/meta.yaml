@@ -1,0 +1,27 @@
+{% set version = "1.0.12" %}
+
+package:
+  name: munkres
+  version: {{version}}
+
+source:
+  git_url: https://github.com/bmc/munkres  
+  git_tag: release-{{version}}
+
+build:
+  number: 0
+  noarch: python
+  script: python setup.py install --single-version-externally-managed --record=record.txt
+
+requirements:
+  build:
+    - python
+    - setuptools
+
+  run:
+    - python
+
+about:
+  home: http://software.clapper.org/munkres/
+  license: Apache 2.0
+  summary: Munkres (a.k.a. Hungarian) algorithm for Python
