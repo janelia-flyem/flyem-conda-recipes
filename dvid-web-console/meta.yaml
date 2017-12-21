@@ -1,0 +1,27 @@
+{% set version = "1.14.10" %}
+{% set sha256 = "8eeebe51df61b792afc6d30c9b5a11c9a2c5861751d64f760e4b3f9435a4eabc" %}
+
+package:
+  name: dvid-web-console
+  version: {{ version }}
+
+source:
+  # Instead of building from source, we download the pre-built release distribution from github
+  # (This requires that a dvid-console developer already packaged everything for us...)
+  url: https://github.com/janelia-flyem/dvid-console/releases/download/v{{version}}/dvid-console-{{version}}.tar.gz
+  sha256: {{ sha256 }}
+
+build:
+  number: 0
+  noarch: generic
+  
+  # Simply copy the bundle files into PREFIX/http/
+  script: |
+    mkdir -p {{PREFIX}}/http/dvid-web-console
+    cp -r * {{PREFIX}}/http/dvid-web-console/
+
+about:
+  home: https://github.com/janelia-flyem/dvid-console
+  license: BSD 3-Clause
+  #license_file: LICENSE.txt # (in the source code, not the release bundle.)
+  summary: Web console and API help for DVID
