@@ -3,10 +3,10 @@
 mkdir -p build
 cd build
 
-CMAKE_CXX_FLAGS="${CMAKE_CXX_FLAGS} -std=c++11 -fPIC"
+CMAKE_CXX_FLAGS="${CMAKE_CXX_FLAGS} -std=c++11 -fPIC -g"
 
 if [[ $(uname) == "Darwin" ]]; then
-    CMAKE_CXX_FLAGS="${CMAKE_CXX_FLAGS} -stdlib=libc++ -fPIC"
+    CMAKE_CXX_FLAGS="${CMAKE_CXX_FLAGS} -stdlib=libc++ -fPIC -g"
 fi
 
 cmake .. \
