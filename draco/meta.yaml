@@ -1,14 +1,14 @@
-{% set version = "1.0.1" %}
+{% set version = "1.2.5" %}
 
 package:
   name: draco
   version: "{{ version }}"
 
 source:
-  url: https://github.com/google/draco/archive/{{ version }}.zip
-  fn:  draco-{{ version }}.zip
-  #sha256: 6f040a54c4506a7e8cd1f3c94e15109dcf91504c99f67cfca4cc0aaf95c78c5b # 1.0.0 -- has cmake problem
-  sha256: 41f35d2e03d33e53d28759f594614df0038fcda645a3fcc7f26dad92f1dd64ae # 1.0.1
+  url: https://github.com/google/draco/archive/{{ version }}.tar.gz
+  fn:  draco-{{ version }}.tar.gz
+  sha256: 76064614bcf5bc80c13291d38c2ea7b8e9c8827a98de93f7bc8bbe4b6e1ec1c4 # 1.2.5
+  
 
 build:
   number: 3
