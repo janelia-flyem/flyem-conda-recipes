@@ -1,0 +1,46 @@
+package:
+    name: pyspark-flame
+
+  # Automatically determine the version from the last git tag
+  {% if GIT_DESCRIBE_NUMBER|int == 0 %}
+    version: "{{GIT_DESCRIBE_TAG}}"
+  {% else %}
+    # If we're using a non-tagged revision, append '.postN' to the version
+    version: "{{GIT_DESCRIBE_TAG}}.post{{GIT_DESCRIBE_NUMBER}}"
+  {% endif %}
+
+source:
+  # Use our own branch, which includes python-3 fixes and a bugfix for the vendored flamegraph.pl
+  git_url: https://github.com/stuarteberg/pyspark-flame
+  git_tag: python-3
+  
+
+build:
+  number: 0
+  script: python setup.py install --single-version-externally-managed --record record.txt
+  noarch: python
+  
+requirements:
+  build:
+    - python 3.6*
+    - setuptools
+    - pypandoc
+
+  run:
+    - python 3.6*
+    - pypandoc
+    
+    # Technically, this package requires Spark, but we assume
+    # the user has already installed it via other means.
+    # - pyspark
+
+# Can't test because the we don't install spark in the conda build
+##test:
+##  imports:
+##    - pyspark_flame
+
+about:
+  home: https://github.com/jamespic/pyspark-flame
+  license: MIT
+  license_file: LICENSE
+  summary: A low-overhead sampling profiler for PySpark, that outputs Flame Graphs
