@@ -1,5 +1,5 @@
-{% set version = "1.14.10" %}
-{% set sha256 = "8eeebe51df61b792afc6d30c9b5a11c9a2c5861751d64f760e4b3f9435a4eabc" %}
+{% set version = "2.1.4" %}
+{% set sha256 = "f4979bb33dd7fb0408f0dad1a28f6be184b7325854c2823294db34de4320f396" %}
 
 package:
   name: dvid-web-console
