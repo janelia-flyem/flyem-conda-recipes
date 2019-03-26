@@ -1,5 +1,5 @@
-{% set version = "3.1.2" %}
-{% set sha256 = "c937f3019d8798231eb29bb00e6677e3a45b430f059225851820cfb396902421" %}
+{% set version = "3.2.1" %}
+{% set sha256 = "ee3ef0e46cb09142ac624852ce070904f469b94c1eb9ec0aa22554439ba4da92" %}
 
 package:
   name: dvid-web-console
@@ -8,7 +8,7 @@ package:
 source:
   # Instead of building from source, we download the pre-built release distribution from github
   # (This requires that a dvid-console developer already packaged everything for us...)
-  url: https://github.com/janelia-flyem/dvid-console/releases/download/{{version}}/dvid-console-{{version}}.tar.gz
+  url: https://github.com/janelia-flyem/dvid-console/releases/download/v{{version}}/dvid-console-{{version}}.tar.gz
   sha256: {{ sha256 }}
 
 build:
