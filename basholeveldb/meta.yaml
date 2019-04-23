@@ -3,7 +3,7 @@ package:
   version: 2.0.29
 
 build:
-  number: 1
+  number: 2
 
 source:
   # Janelia cached version has minor modifications from the original basho source.
@@ -14,7 +14,7 @@ source:
 
 requirements:
   build:
-    - toolchain # From conda-forge. Sets environment variables like CC, CXX, MACOSX_DEPLOYMENT_TARGET, etc.
+    - {{ compiler('c') }}
 
 about:
   home: https://github.com/basho/leveldb
