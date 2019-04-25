@@ -3,7 +3,7 @@ package:
   version: 2.0.29
 
 build:
-  number: 2
+  number: 3
 
 source:
   # Janelia cached version has minor modifications from the original basho source.
@@ -15,6 +15,7 @@ source:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
 
 about:
   home: https://github.com/basho/leveldb
