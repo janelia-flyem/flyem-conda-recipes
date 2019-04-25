@@ -1,7 +1,18 @@
 {% set version = "1.3.4" %}
 
+# To make a debug build, set this environment variable when invoking conda-build.
+# Example:
+#
+#   CMAKE_BUILD_TYPE=Debug conda build draco
+# 
+{% if CMAKE_BUILD_TYPE == "Debug" %}
+  {% set name = "draco-debug" %}
+{% else %}
+  {% set name = "draco" %}
+{% endif %}
+
 package:
-  name: draco
+  name: {{ name }}
   version: "{{ version }}"
 
 source:
@@ -12,6 +23,9 @@ source:
 
 build:
   number: 0
+  
+  script_env:
+    - CMAKE_BUILD_TYPE
 
 requirements:
   build:
