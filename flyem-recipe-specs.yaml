@@ -182,8 +182,8 @@ recipe-specs:
 # FIXME: This is Dominik's branch, and not even the main one.
 #
   - name: nifty
-    recipe-repo: https://github.com/k-dominik/nifty
-    tag: quickfix-conda-recipe
+    recipe-repo: https://github.com/stuarteberg/nifty
+    tag: quickfix-conda-recipe # Dominik's quickfix branch, but rebased on master
     recipe-subdir: conda-recipe
 
 #  - name: neuroglancer-python
