@@ -108,7 +108,7 @@ recipe-specs:
 
   - name: libdvid-cpp
     recipe-repo: https://github.com/janelia-flyem/libdvid-cpp
-    tag: new-compiler
+    tag: new-compilers
     recipe-subdir: conda-recipe
 
   #
