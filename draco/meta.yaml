@@ -26,7 +26,7 @@ source:
   
 
 build:
-  number: 0
+  number: 1
   
   script_env:
     - CMAKE_BUILD_TYPE
@@ -34,6 +34,8 @@ build:
 requirements:
   build:
     - cmake
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
 
 test:
   commands:
