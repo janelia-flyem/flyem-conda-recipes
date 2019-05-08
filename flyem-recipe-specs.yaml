@@ -1,5 +1,5 @@
 shared-config:
-  master-conda-build-config: flyem-pinned-versions.yaml
+  master-conda-build-config: master-conda-build-config.yaml
   repo-cache-dir: ./repo-cache # Relative to this yaml file's directory.
   source-channels:
     - flyem-forge/label/upgrade201904
