@@ -5,3 +5,4 @@
 *.tar.gz
 *.zip
 *.app
+repo-cache/
