@@ -20,7 +20,7 @@ recipe-specs:
   - name: assimp
     recipe-repo: https://github.com/janelia-flyem/flyem-conda-recipes
     tag: master
-    recipe-subdir: assimp
+    recipe-subdir: recipes/assimp
 
 ## conda-forge has jsoncpp 1.8.4
 ## Can neutu use that?
@@ -34,18 +34,18 @@ recipe-specs:
 #  - name: jansson
 #    recipe-repo: https://github.com/janelia-flyem/flyem-conda-recipes
 #    tag: master
-#    recipe-subdir: jansson
+#    recipe-subdir: recipes/jansson
 
 # We don't build our own lz4 any more; we use conda-forge
 #  - name: lz4
 #    recipe-repo: https://github.com/janelia-flyem/flyem-conda-recipes
 #    tag: master
-#    recipe-subdir: lz4
+#    recipe-subdir: recipes/lz4
 #
 #  - name: python-lz4
 #    recipe-repo: https://github.com/janelia-flyem/flyem-conda-recipes
 #    tag: master
-#    recipe-subdir: python-lz4
+#    recipe-subdir: recipes/python-lz4
 
   - name: confiddler
     recipe-repo: https://github.com/stuarteberg/confiddler
@@ -88,17 +88,17 @@ recipe-specs:
   - name: draco
     recipe-repo: https://github.com/janelia-flyem/flyem-conda-recipes
     tag: master
-    recipe-subdir: draco
+    recipe-subdir: recipes/draco
 
   - name: basholeveldb
     recipe-repo: https://github.com/janelia-flyem/flyem-conda-recipes
     tag:  master
-    recipe-subdir: basholeveldb
+    recipe-subdir: recipes/basholeveldb
 
   - name: dvid-web-console
     # From pre-built distribution
     recipe-repo: https://github.com/janelia-flyem/flyem-conda-recipes
-    recipe-subdir: dvid-web-console
+    recipe-subdir: recipes/dvid-web-console
     tag: master
     
   - name: dvid
@@ -132,7 +132,7 @@ recipe-specs:
 #  - name: vtk-nopython
 #    recipe-repo: https://github.com/janelia-flyem/flyem-conda-recipes
 #    tag: master
-#    recipe-subdir: vtk-nopython
+#    recipe-subdir: recipes/vtk-nopython
 #      
 #  - name: neuroproof
 #    recipe-repo: https://github.com/janelia-flyem/NeuroProof
@@ -154,12 +154,12 @@ recipe-specs:
 #  - name: gsutil-env
 #    recipe-repo: https://github.com/janelia-flyem/flyem-conda-recipes
 #    tag: master
-#    recipe-subdir: gsutil-env
+#    recipe-subdir: recipes/gsutil-env
 
 #  - name: munkres
 #    recipe-repo: https://github.com/janelia-flyem/flyem-conda-recipes
 #    tag:  master
-#    recipe-subdir: munkres
+#    recipe-subdir: recipes/munkres
 
 #  - name: z5py
 #    recipe-repo: https://github.com/stuarteberg/z5
@@ -169,7 +169,7 @@ recipe-specs:
 #  - name: pyspark-flame
 #    recipe-repo: https://github.com/janelia-flyem/flyem-conda-recipes
 #    tag:  master
-#    recipe-subdir: pyspark-flame
+#    recipe-subdir: recipes/pyspark-flame
 
 #  # Note: Uses GPLv3.  Can't be included in BSD-licensed code.
 #  - name: graph-tool
@@ -222,7 +222,7 @@ recipe-specs:
   - name: fq-mesh-simplification
     recipe-repo: https://github.com/janelia-flyem/flyem-conda-recipes
     tag: master
-    recipe-subdir: fq-mesh-simplification
+    recipe-subdir: recipes/fq-mesh-simplification
 
   - name: vol2mesh
     recipe-repo: https://github.com/janelia-flyem/vol2mesh
@@ -239,7 +239,7 @@ recipe-specs:
 #  - name: google-api-client
 #    recipe-repo: https://github.com/janelia-flyem/flyem-conda-recipes
 #    tag:  master
-#    recipe-subdir: google-api-client
+#    recipe-subdir: recipes/google-api-client
 
 ## FIXME: No recipe for pyzem yet.
 #  - name: pyzem
