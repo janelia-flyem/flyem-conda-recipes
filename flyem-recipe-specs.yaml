@@ -1,3 +1,14 @@
+#
+# This is a "recipe specs file", to be used with the 'publish-conda-stack' utility.
+# At the time of this writing that tool is implemented here:
+#
+#   https://github.com/ilastik/ilastik-publish-packages/pull/19
+#
+# And installable via:
+#
+#   conda install -c flyem-forge publish-conda-stack
+#
+
 shared-config:
   master-conda-build-config: master-conda-build-config.yaml
   repo-cache-dir: ./repo-cache # Relative to this yaml file's directory.

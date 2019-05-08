@@ -1,3 +1,16 @@
+#
+# This is a conda build config file.
+#
+# For details on these settings, see:
+# https://docs.conda.io/projects/conda-build/en/latest/resources/variants.html
+#
+# To use this file in conjunction with the 'publish-conda-stack' tool,
+# your specs file should start with these lines:
+#
+#   shared-config:
+#     master-conda-build-config: master-conda-build-config.yaml
+#
+
 boost:
   - 1.68
 boost_cpp:
