@@ -1,2 +1,1 @@
 export GOROOT="$GOROOT_OLD"
-export GOBIN="$GOBIN_OLD"
