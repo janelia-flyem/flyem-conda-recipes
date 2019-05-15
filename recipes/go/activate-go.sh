@@ -1,0 +1,1 @@
+export GOROOT=${PREFIX}/
