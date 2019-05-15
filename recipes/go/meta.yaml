@@ -14,9 +14,7 @@ source:
 
 build:
   number: 0
-  
-  # Simply copy the files into $PREFIX
-  script: cp -r * {{PREFIX}}
+
 
 about:
   home: http://golang.org

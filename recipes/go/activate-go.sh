@@ -1,1 +1,4 @@
-export GOROOT=${PREFIX}/
+export GOROOT_OLD=$GOROOT
+export GOBIN_OLD=$GOBIN
+export GOROOT=${CONDA_PREFIX}/go
+export GOBIN=$GOROOT/bin
