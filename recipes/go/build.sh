@@ -4,12 +4,12 @@
 mkdir -p ${PREFIX}/go
 cp -r * ${PREFIX}/go
 
-# The vendored pprof package includes a test suite that
-# contains intentionally "malformed" Mach-O and ELF binaries.
-#
-# Unfortunately, conda-build discovers those files and tries to analyze them, which crashes.
-# We don't need to run the pprof test suite, so just remove those "malformed" files.
-rm ${PREFIX}/go/src/cmd/vendor/github.com/google/pprof/internal/binutils/testdata/malformed_*
+## The vendored pprof package includes a test suite that
+## contains intentionally "malformed" Mach-O and ELF binaries.
+##
+## Unfortunately, conda-build discovers those files and tries to analyze them, which crashes.
+## We don't need to run the pprof test suite, so just remove those "malformed" files.
+#rm ${PREFIX}/go/src/cmd/vendor/github.com/google/pprof/internal/binutils/testdata/malformed_*
 
 # Symlink everything from go/bin directly into bin
 mkdir -p ${PREFIX}/bin
