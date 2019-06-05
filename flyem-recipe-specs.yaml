@@ -64,8 +64,9 @@ recipe-specs:
     recipe-subdir: conda-recipe
 
   - name: ilastikrag
+    #recipe-repo: https://github.com/stuarteberg/ilastikrag
     recipe-repo: https://github.com/ilastik/ilastikrag
-    tag: update-recipe
+    tag: master
     recipe-subdir: conda-recipe
 
 #  - name: quilted
@@ -115,29 +116,26 @@ recipe-specs:
   - name: go
     recipe-repo: https://github.com/janelia-flyem/flyem-conda-recipes
     recipe-subdir: recipes/go
-    tag: add-go
+    tag: master
 
   - name: dvid
     recipe-repo: https://github.com/janelia-flyem/dvid
     recipe-subdir: scripts/conda-recipe
-    tag: new-compilers
+    tag: master
     
   - name: dvidutils
     recipe-repo: https://github.com/stuarteberg/dvidutils
-    tag: new-compilers
+    tag: master
     recipe-subdir: conda-recipe
 
   - name: libdvid-cpp
     recipe-repo: https://github.com/janelia-flyem/libdvid-cpp
-    tag: new-compilers
+    tag: master
     recipe-subdir: conda-recipe
 
-  #
-  # FIXME: branch name when ready
-  #
   - name: lowtis
     recipe-repo: https://github.com/janelia-flyem/lowtis
-    tag: new-compilers
+    tag: master
     recipe-subdir: conda-recipe
 
 #  - name: opencv-nopython
