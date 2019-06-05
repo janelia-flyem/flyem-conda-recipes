@@ -111,7 +111,12 @@ recipe-specs:
     recipe-repo: https://github.com/janelia-flyem/flyem-conda-recipes
     recipe-subdir: recipes/dvid-web-console
     tag: master
-    
+
+  - name: go
+    recipe-repo: https://github.com/janelia-flyem/flyem-conda-recipes
+    recipe-subdir: recipes/go
+    tag: add-go
+
   - name: dvid
     recipe-repo: https://github.com/janelia-flyem/dvid
     recipe-subdir: scripts/conda-recipe

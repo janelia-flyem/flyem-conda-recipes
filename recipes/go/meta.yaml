@@ -1,0 +1,38 @@
+{% set version = "1.11.10" %}
+
+package:
+  name: go
+  version: {{ version }}
+
+source:
+  url: https://dl.google.com/go/go{{ version }}.darwin-amd64.tar.gz        # [osx]
+  sha256: 194d7ce2b88a791147be64860f21bac8eeec8f372c9e9caab6c72c3bd525a039 # [osx]
+
+  url: https://dl.google.com/go/go{{ version }}.linux-amd64.tar.gz         # [linux]
+  sha256: aefaa228b68641e266d1f23f1d95dba33f17552ba132878b65bb798ffa37e6d0 # [linux]
+
+build:
+  number: 0
+  
+  # The conda-forge go recipe does this, so we'll do it, too.
+  missing_dso_whitelist:
+    - /usr/lib/libSystem.B.dylib
+    - /usr/lib/libgcc_s.1.dylib
+    - libc.so.6
+
+about:
+  home: http://golang.org
+  license: BSD-Style
+  license_family: BSD
+  license_file: LICENSE
+  summary: 'The Go Programming Language'
+  description: |
+    Go is expressive, concise, clean, and efficient. Its concurrency mechanisms
+    make it easy to write programs that get the most out of multicore and
+    networked machines, while its novel type system enables flexible and
+    modular program construction. Go compiles quickly to machine code yet has
+    the convenience of garbage collection and the power of run-time reflection.
+    It's a fast, statically typed, compiled language that feels like a
+    dynamically typed, interpreted language.
+  doc_url: https://golang.org/doc
+  dev_url: https://go.googlesource.com/go
