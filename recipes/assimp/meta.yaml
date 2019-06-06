@@ -19,6 +19,8 @@ requirements:
   build:
     - cmake
     - ninja
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
 
 about:
   home: https://github.com/assimp/assimp
