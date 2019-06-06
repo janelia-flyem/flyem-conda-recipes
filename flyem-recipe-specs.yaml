@@ -12,11 +12,16 @@
 shared-config:
   master-conda-build-config: master-conda-build-config.yaml
   repo-cache-dir: ./repo-cache # Relative to this yaml file's directory.
+
   source-channels:
-    - flyem-forge/label/upgrade201904
-    #- flyem-forge
+    - flyem-forge
     - conda-forge
-  destination-channel: flyem-forge/label/upgrade201904
+  destination-channel: flyem-forge
+
+#  source-channels:
+#    - flyem-forge/label/ff201905
+#    - conda-forge/label/cf201901
+#  destination-channel: flyem-forge/label/upgrade201904
 
 recipe-specs:
 
