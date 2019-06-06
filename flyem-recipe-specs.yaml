@@ -21,7 +21,7 @@ shared-config:
 #  source-channels:
 #    - flyem-forge/label/ff201905
 #    - conda-forge/label/cf201901
-#  destination-channel: flyem-forge/label/upgrade201904
+#  destination-channel: flyem-forge/label/ff201905
 
 recipe-specs:
 
