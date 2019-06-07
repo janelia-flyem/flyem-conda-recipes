@@ -38,6 +38,11 @@ recipe-specs:
     tag: master
     recipe-subdir: recipes/assimp
 
+  - name: glbinding
+    recipe-repo: https://github.com/janelia-flyem/flyem-conda-recipes
+    tag: master
+    recipe-subdir: recipes/glbinding
+
   - name: confiddler
     recipe-repo: https://github.com/stuarteberg/confiddler
     tag: master
