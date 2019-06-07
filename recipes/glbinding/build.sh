@@ -12,8 +12,9 @@ if [ `uname` = "Darwin" ]; then
         "-DCMAKE_CXX_FLAGS:STRING=${CMAKE_CXX_FLAGS} -stdlib=libc++ -std=c++11"
     )
 else
+	# We need /usr/include for GL/glx.h
     SCREEN_ARGS=(
-        "-DCMAKE_CXX_FLAGS:STRING=${CMAKE_CXX_FLAGS} -std=c++11"
+        "-DCMAKE_CXX_FLAGS:STRING=${CMAKE_CXX_FLAGS} -std=c++11 -I/usr/include"
     )
 fi
 
