@@ -55,7 +55,7 @@ recipe-specs:
     recipe-subdir: conda-recipe
 
   - name: dvid-resource-manager
-    recipe-repo: https://github.com/janelia-flyem/DVIDResourceManager
+    recipe-repo: https://github.com/janelia-flyem/dvid-resource-manager
     tag: master
     recipe-subdir: conda-recipe
 
