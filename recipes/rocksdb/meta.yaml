@@ -1,0 +1,21 @@
+package:
+  name: rocksdb
+  version: 6.1.2
+
+build:
+  number: 1
+
+source:
+  url: https://github.com/facebook/rocksdb/archive/v6.1.2.tar.gz
+  fn:  v6.1.2.tar.gz
+  md5: 01a3d6794f2eef16be9a6a0a4b6cd5af
+
+requirements:
+  build:
+    - {{ compiler('c') }} # [linux]
+    - {{ compiler('cxx') }} # [linux]
+
+about:
+  home: https://github.com/facebook/rocksdb
+  license: Apache 2.0
+  summary: A Persistent Key-Value Store for Flash and RAM Storage
