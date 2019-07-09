@@ -1,0 +1,43 @@
+{% set data = load_setup_py_data() %}
+
+package:
+  name: dvidtools
+  
+  version: {{ data['version'] }}
+
+source:
+  git_url: https://github.com/flyconnectome/dvid_tools
+  
+  # If you change this, be sure to update the build number (unless the version has changed).
+  git_tag: 0cb572878f74e50839f1f819e487d6aa5498e0c4
+
+build:
+  noarch: python
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+
+requirements:
+  host:
+    - python
+    - setuptools
+    - pip
+
+  run:
+    - python
+    # dependencies are defined in setup.py
+    {% for dep in data['install_requires'] %}
+    - {{ dep.lower() }}
+    {% endfor %}
+    
+    # scikit-learn is an optional dependency,
+    # so it isn't listed in setup.py
+    - scikit-learn
+
+test:
+  imports:
+    dvidtools
+
+about:
+  home: https://github.com/flyconnectome/dvid_tools
+  summary: Miscellaneous Python tools to query a DVID server
+  license: GPL-3.0
+  license_file: LICENSE

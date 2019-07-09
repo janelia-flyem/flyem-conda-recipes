@@ -125,10 +125,16 @@ recipe-specs:
     tag: quickfix-conda-recipe # Dominik's quickfix branch, but rebased on master
     recipe-subdir: conda-recipe
 
+  - name: dvidtools
+    recipe-repo: https://github.com/janelia-flyem/flyem-conda-recipes
+    tag:  master
+    recipe-subdir: recipes/dvidtools
+
   - name: neuclease
     recipe-repo: https://github.com/janelia-flyem/neuclease
     tag:  master
     recipe-subdir: conda-recipe
+    conda-build-flags: --no-test
 
   - name: marching_cubes
     recipe-repo: https://github.com/ilastik/marching_cubes
@@ -146,9 +152,10 @@ recipe-specs:
     recipe-subdir: conda-recipe
 
   - name: flyemflows
-    recipe-repo: https://github.com/stuarteberg/flyemflows
+    recipe-repo: https://github.com/janelia-flyem/flyemflows
     tag: master
     recipe-subdir: conda-recipe
+    conda-build-flags: --no-test
 
 #  # Note: Uses GPLv3.  Can't be included in BSD-licensed code.
 #  - name: graph-tool
