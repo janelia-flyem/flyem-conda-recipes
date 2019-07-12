@@ -130,6 +130,11 @@ recipe-specs:
     tag:  master
     recipe-subdir: recipes/dvidtools
 
+  - name: marktips
+    recipe-repo: https://github.com/janelia-flyem/marktips
+    tag:  master
+    recipe-subdir: conda-recipe
+
   - name: neuclease
     recipe-repo: https://github.com/janelia-flyem/neuclease
     tag:  master
