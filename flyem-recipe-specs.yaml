@@ -156,6 +156,11 @@ recipe-specs:
     tag: master
     recipe-subdir: conda-recipe
 
+  - name: z5py
+    recipe-repo: https://github.com/conda-forge/z5py-feedstock
+    tag: master
+    recipe-subdir: recipe
+
   - name: flyemflows
     recipe-repo: https://github.com/janelia-flyem/flyemflows
     tag: master
