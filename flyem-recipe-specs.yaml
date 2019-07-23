@@ -144,8 +144,9 @@ recipe-specs:
     conda-build-flags: --no-test
 
   - name: marching_cubes
-    recipe-repo: https://github.com/ilastik/marching_cubes
-    tag: master
+    recipe-repo: https://github.com/stuarteberg/marching_cubes
+    tag: no-boost-dep # Fixes the conda recipe (don't require boost at runtime)
+                      # https://github.com/ilastik/marching_cubes/pull/20
     recipe-subdir: conda-recipe
 
   - name: fq-mesh-simplification
