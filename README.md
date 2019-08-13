@@ -38,6 +38,7 @@ Then use it to build one or more of the recipes listed in `flyem-recipe-specs.ya
 
 ```
 $ conda activate base
+$ cd flyem-conda-recipes
 $ publish-conda-stack flyem-recipe-specs.yaml dvid libdvid-cpp neuclease
 ```
 
