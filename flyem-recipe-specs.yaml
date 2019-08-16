@@ -159,10 +159,11 @@ recipe-specs:
     tag: master
     recipe-subdir: conda-recipe
 
-  - name: z5py
-    recipe-repo: https://github.com/stuarteberg/z5py-feedstock
-    tag: fix-build
-    recipe-subdir: recipe
+## We obtain z5py from conda-forge
+#  - name: z5py
+#    recipe-repo: https://github.com/stuarteberg/z5py-feedstock
+#    tag: fix-build
+#    recipe-subdir: recipe
 
   - name: flyemflows
     recipe-repo: https://github.com/janelia-flyem/flyemflows
