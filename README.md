@@ -5,18 +5,20 @@ This repo contains the following:
 
 1. `flyem-recipe-specs.yaml`: A list of all (or at least most) C++ and Python software packages that FlyEM builds, annotated with the exact source locations and branches of the recipes we build. This file is designed to be used with the [`publish-conda-stack`][pcs] tool. (See below.)
 
-2. `master-conda-build-config.yaml`: A [`conda-build` config][cbc] file, which is used to constrain the versions of certain common dependencies in our stack.
+2. `master-conda-build-config.yaml`: A [`conda-build` config][cbc] file, which constrains common dependencies in our stack.
 
-3. A collection of conda recipes to build *third-party* software.  Note that most of the recipes listed in `flyem-recipe-specs.yaml` are *not* stored here in this collection.  That's because many software packages include a conda recipe directly in their own git repos.  But sometimes we need to build a third-party package that does not include its own conda recipe.  In those cases, we have written custom conda recipes, and we store them here.
+3. A collection of conda recipes to build *third-party* software.  Most of the recipes listed in `flyem-recipe-specs.yaml` are not stored here; they're stored with the projects' own source code.  But for third-party packages, we've written our own conda recipes, which are stored here in the `recipes` directory.
 
 [pcs]: https://github.com/ilastik/publish-conda-stack
 [cbc]: https://docs.conda.io/projects/conda-build/en/latest/resources/variants.html
-
+[ff]: https://anaconda.org/flyem-forge/repo
+[cfp]: https://github.com/conda-forge/conda-forge-pinning-feedstock/blob/master/recipe/conda_build_config.yaml
+[cbs]: https://github.com/janelia-flyem/flyem-conda-recipes/blob/master/master-conda-build-config.yaml#L32-L46
 
 publish-conda-stack
 -------------------
 
-As time passes, the packages you've compiled and uploaded to our channel (`flyem-forge`) may lag behind the latest versions you would get if you were to re-build the recipes listed here.  To ensure that a particular package on our channel is up-to-date, you would need to do the following:
+As time passes, the packages you've compiled and uploaded to [our channel (`flyem-forge`)][ff] will become out-of-date with respect to their dependencies (and the [`conda-forge` pinnings][cfp]).  You'll need to rebuild these packages periodically.  But if you had to do it manually, keeping the packages up-to-date would require the following steps:
 
 1. Clone the recipe repo
 2. Check out the desired branch or tag
@@ -26,7 +28,8 @@ As time passes, the packages you've compiled and uploaded to our channel (`flyem
 6. Upload the newly built package to `flyem-forge`.
 
 
-The above process would be tedious to perform manually.  Fortunately, there's a convenient tool that automates it: [`publish-conda-stack`][pcs].
+That's tedious.  Fortunately, there's a convenient tool that automates the process: [`publish-conda-stack`][pcs].
+
 
 First, install it:
 
@@ -60,4 +63,4 @@ When building C++ packages on Linux, it's a good idea to run your build within a
 macOS SDK
 ---------
 
-When building C++ packages on macOS, it's a good idea to configure Xcode to use an old macOS SDK, to ensure maximum compatibility with older macOS versions.  If you're using the files in this repo, then the SDK version to use is configured for you in `master-build-config.yaml`.  In that file, please see the comments for `CONDA_BUILD_SYSROOT` for more details.  You will need to install the macOS SDK separately before you can build these C++ packages on macOS.
+When building C++ packages on macOS, it's a good idea to configure Xcode to use an old macOS SDK, to ensure maximum compatibility with older macOS versions.  If you're using the files in this repo, then the SDK version to use is configured for you in `master-build-config.yaml`.  In that file, please see the [comments for `CONDA_BUILD_SYSROOT`][cbs] for more details.  You will need to install the macOS SDK separately before you can build these C++ packages on macOS.
