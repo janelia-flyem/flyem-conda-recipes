@@ -62,7 +62,7 @@ requirements:
     - gdk-pixbuf {{ gdk_pixbuf }}
     - glib {{ glib }}
     - libxkbcommon 0.8.*
-    - pango 1.42.* # {{ pango }}
+    - pango 1.42.* # {#{ pango }#}
     - xorg-libice 1.0.*
     - xorg-libsm 1.2.*
     - xorg-libx11 1.6.*

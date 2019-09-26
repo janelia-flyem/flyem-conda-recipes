@@ -176,11 +176,6 @@ recipe-specs:
 #    tag:  master
 #    recipe-subdir: recipe
 
-  - name: epoxy
-    recipe-repo: https://github.com/janelia-flyem/flyem-conda-recipes
-    tag: master
-    recipe-subdir: recipes/epoxy
-
   - name: at-spi2-core
     recipe-repo: https://github.com/janelia-flyem/flyem-conda-recipes
     tag: master
@@ -190,6 +185,21 @@ recipe-specs:
     recipe-repo: https://github.com/janelia-flyem/flyem-conda-recipes
     tag: master
     recipe-subdir: recipes/at-spi2-atk
+
+  - name: epoxy
+    recipe-repo: https://github.com/janelia-flyem/flyem-conda-recipes
+    tag: master
+    recipe-subdir: recipes/epoxy
+
+  - name: wayland
+    recipe-repo: https://github.com/janelia-flyem/flyem-conda-recipes
+    tag: master
+    recipe-subdir: recipes/wayland
+
+  - name: wayland-protocols
+    recipe-repo: https://github.com/janelia-flyem/flyem-conda-recipes
+    tag: master
+    recipe-subdir: recipes/wayland-protocols
 
   - name: gtk3
     recipe-repo: https://github.com/janelia-flyem/flyem-conda-recipes
