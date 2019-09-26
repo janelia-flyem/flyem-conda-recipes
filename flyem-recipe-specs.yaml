@@ -176,6 +176,25 @@ recipe-specs:
 #    tag:  master
 #    recipe-subdir: recipe
 
+  - name: epoxy
+    recipe-repo: https://github.com/janelia-flyem/flyem-conda-recipes
+    tag: master
+    recipe-subdir: recipes/epoxy
+
+  - name: at-spi2-core
+    recipe-repo: https://github.com/janelia-flyem/flyem-conda-recipes
+    tag: master
+    recipe-subdir: recipes/at-spi2-core
+
+  - name: at-spi2-atk
+    recipe-repo: https://github.com/janelia-flyem/flyem-conda-recipes
+    tag: master
+    recipe-subdir: recipes/at-spi2-atk
+
+  - name: gtk3
+    recipe-repo: https://github.com/janelia-flyem/flyem-conda-recipes
+    tag: master
+    recipe-subdir: recipes/gtk3
 
 
 ########################################################
