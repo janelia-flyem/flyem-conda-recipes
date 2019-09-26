@@ -47,5 +47,7 @@ test:
 about:
   home: https://github.com/anholt/libepoxy
   license: MIT
-  license_file: COPYING
+  license_file:
+    - COPYING
+    - khronos-headers/LICENSE-KHRONOS
   summary: 'A library for handling OpenGL function pointer management for you.'

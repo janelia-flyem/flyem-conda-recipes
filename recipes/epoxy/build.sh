@@ -12,15 +12,10 @@ meson_config_args=(
     -D tests=false
 )
 
-# Make it so that pkg-config can find the CDT (E)GL(X) packages:
-export PKG_CONFIG_PATH="$BUILD_PREFIX/$HOST/sysroot/usr/lib64/pkgconfig"
-
-# Hackity hack: manually copy the GL headers that we require, so that
-# downstream deps don't all have to include a magic CDT package as a dependency
-
-mkdir -p $PREFIX/include/KHR $PREFIX/include/EGL
-cp $BUILD_PREFIX/$HOST/sysroot/usr/include/KHR/khrplatform.h $PREFIX/include/KHR/
-cp $BUILD_PREFIX/$HOST/sysroot/usr/include/EGL/eglplatform.h $PREFIX/include/EGL/
+mkdir -p ${PREFIX}/include/KHR
+mkdir -p ${PREFIX}/include/EGL
+cp ${RECIPE_DIR}/khronos-headers/KHR/* $PREFIX/include/KHR/
+cp ${RECIPE_DIR}/khronos-headers/EGL/* $PREFIX/include/EGL/
 
 meson builddir --prefix=$PREFIX --libdir=$PREFIX/lib
 meson configure "${meson_config_args[@]}" builddir
