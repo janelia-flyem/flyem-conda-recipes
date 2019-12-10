@@ -29,6 +29,10 @@ glib:
   - 2.58
 hdf5:
   - 1.10.5
+librdkafka:
+  - 0.11.5
+lz4_c:
+  - 1.8.3
 numpy:
   - 1.17
 python:
@@ -46,6 +50,10 @@ pin_run_as_build:
   gdk_pixbuf:
     max_pin: x.x.x
   hdf5:
+    max_pin: x.x.x
+  librdkafka:
+    max_pin: x.x.x
+  lz4-c:
     max_pin: x.x.x
   numpy:
     max_pin: x.x
