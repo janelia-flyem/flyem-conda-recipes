@@ -98,7 +98,7 @@ recipe-specs:
   - name: dvid
     recipe-repo: https://github.com/janelia-flyem/dvid
     recipe-subdir: scripts/conda-recipe
-    tag: v0.9.3
+    tag: v0.9.5
     
   - name: dvidutils
     recipe-repo: https://github.com/stuarteberg/dvidutils
