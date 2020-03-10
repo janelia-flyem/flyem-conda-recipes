@@ -209,6 +209,12 @@ recipe-specs:
     tag: master
     recipe-subdir: recipes/gtk3
 
+  - name: ngspice
+    recipe-repo: https://github.com/stuarteberg/staged-recipes
+    tag: ngspice
+    recipe-subdir: recipes/ngspice
+
+
 
 ########################################################
 ###                                                  ###
