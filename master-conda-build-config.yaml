@@ -30,7 +30,7 @@ glib:
 hdf5:
   - 1.10.5
 librdkafka:
-  - 0.11.5
+  - 1.3.0
 lz4_c:
   - 1.8.3
 numpy:
