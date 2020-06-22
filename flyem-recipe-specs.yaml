@@ -148,8 +148,8 @@ recipe-specs:
     conda-build-flags: --no-test
 
   - name: marching_cubes
-    recipe-repo: https://github.com/ilastik/marching_cubes
-    tag: master
+    recipe-repo: https://github.com/stuarteberg/marching_cubes
+    tag: fix-smoothing-off-by-one
     recipe-subdir: conda-recipe
 
   - name: fq-mesh-simplification
