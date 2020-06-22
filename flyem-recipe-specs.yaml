@@ -101,7 +101,7 @@ recipe-specs:
     tag: v0.9.7
     #tag: master
     environment:
-      GOMAXPROCS: 4
+      GOMAXPROCS: 2
       DVID_LOW_MEMORY: 1
 
   - name: dvidutils
