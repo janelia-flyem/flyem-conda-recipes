@@ -125,10 +125,15 @@ recipe-specs:
     tag:  compiler-switch # Dominik's branch.  See https://github.com/svenpeter42/fastfilters/pull/21
     recipe-subdir: pkg/conda/fastfilters
 
-  # FIXME: This is Dominik's branch, and not even the main one.
   - name: nifty
+    # FIXME: This is Dominik's branch, and not even the main one.
+    #tag: quickfix-conda-recipe # Dominik's quickfix branch, but rebased on master
+    #recipe-repo: https://github.com/constantinpape/nifty
+    #tag: v1.0.7
+
+    # Same as constantin's current master, but with conda-recipe fixes.
     recipe-repo: https://github.com/stuarteberg/nifty
-    tag: quickfix-conda-recipe # Dominik's quickfix branch, but rebased on master
+    tag: v1.0.7.1
     recipe-subdir: conda-recipe
 
   - name: dvidtools
