@@ -14,9 +14,9 @@
 # https://github.com/conda-forge/conda-forge-pinning-feedstock/blob/master/recipe/conda_build_config.yaml
 
 boost:
-  - 1.70
+  - 1.72
 boost_cpp:
-  - 1.70
+  - 1.72
 hdf5:
   - 1.10.5
 librdkafka:
@@ -30,6 +30,8 @@ python:
 
 pin_run_as_build:
   boost:
+    max_pin: x.x
+  boost_cpp:
     max_pin: x.x
   hdf5:
     max_pin: x.x.x
