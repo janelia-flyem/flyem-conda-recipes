@@ -98,7 +98,7 @@ recipe-specs:
   - name: dvid
     recipe-repo: https://github.com/janelia-flyem/dvid
     recipe-subdir: scripts/conda-recipe
-    tag: v0.9.8
+    tag: v0.9.9
     #tag: master
     environment:
       GOMAXPROCS: 2
