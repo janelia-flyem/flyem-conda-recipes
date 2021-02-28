@@ -98,11 +98,11 @@ recipe-specs:
   - name: dvid
     recipe-repo: https://github.com/janelia-flyem/dvid
     recipe-subdir: scripts/conda-recipe
-    tag: v0.9.10
+    tag: v0.9.11
     #tag: master
     environment:
       GOMAXPROCS: 2
-      DVID_LOW_MEMORY: 1
+      DVID_CONDA_SKIP_TESTS: 0
 
   - name: dvidutils
     recipe-repo: https://github.com/stuarteberg/dvidutils
