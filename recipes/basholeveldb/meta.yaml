@@ -3,7 +3,7 @@ package:
   version: 2.0.29
 
 build:
-  number: 3
+  number: 4
 
 source:
   # Janelia cached version has minor modifications from the original basho source.
