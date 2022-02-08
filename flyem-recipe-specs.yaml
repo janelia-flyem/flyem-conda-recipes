@@ -168,53 +168,11 @@ recipe-specs:
     tag: master
     recipe-subdir: conda-recipe
 
-## We obtain z5py from conda-forge
-#  - name: z5py
-#    recipe-repo: https://github.com/stuarteberg/z5py-feedstock
-#    tag: fix-build
-#    recipe-subdir: recipe
-
   - name: flyemflows
     recipe-repo: https://github.com/janelia-flyem/flyemflows
     tag: master
     recipe-subdir: conda-recipe
     conda-build-flags: --no-test
-
-#  # Note: Uses GPLv3.  Can't be included in BSD-licensed code.
-#  - name: graph-tool
-#    recipe-repo: https://github.com/stuarteberg/graph-tool-feedstock
-#    tag:  master
-#    recipe-subdir: recipe
-
-  - name: at-spi2-core
-    recipe-repo: https://github.com/janelia-flyem/flyem-conda-recipes
-    tag: master
-    recipe-subdir: recipes/at-spi2-core
-
-  - name: at-spi2-atk
-    recipe-repo: https://github.com/janelia-flyem/flyem-conda-recipes
-    tag: master
-    recipe-subdir: recipes/at-spi2-atk
-
-  - name: epoxy
-    recipe-repo: https://github.com/janelia-flyem/flyem-conda-recipes
-    tag: master
-    recipe-subdir: recipes/epoxy
-
-  - name: wayland
-    recipe-repo: https://github.com/janelia-flyem/flyem-conda-recipes
-    tag: master
-    recipe-subdir: recipes/wayland
-
-  - name: wayland-protocols
-    recipe-repo: https://github.com/janelia-flyem/flyem-conda-recipes
-    tag: master
-    recipe-subdir: recipes/wayland-protocols
-
-  - name: gtk3
-    recipe-repo: https://github.com/janelia-flyem/flyem-conda-recipes
-    tag: master
-    recipe-subdir: recipes/gtk3
 
   - name: ngspice
     recipe-repo: https://github.com/stuarteberg/staged-recipes
@@ -263,7 +221,7 @@ recipe-specs:
 #    recipe-repo: https://github.com/janelia-flyem/NeuroProof
 #    tag: master
 #    recipe-subdir: conda-recipe
-#      
+#
 #    # Optional specs
 #    environment:
 #      SKIP_NEUROPROOF_TESTS: 0
@@ -309,7 +267,7 @@ recipe-specs:
 #    recipe-repo: https://github.com/janelia-flyem/flyem-conda-recipes
 #    tag: master
 #    recipe-subdir: recipes/vtk-nopython
-#      
+#
 
 ## This package provides a hacky way to make gsutil available from a python-3 environment.
 ## I'm not sures this hack even works any more in conda 4.6.
@@ -329,7 +287,7 @@ recipe-specs:
 
 ## FIXME: Can we just use the conda-forge package?
 #  - name: libjpeg-turbo-feedstock
-#    recipe-repo: 
-#    tag:  
-#    recipe-subdir: 
+#    recipe-repo:
+#    tag:
+#    recipe-subdir:
 
