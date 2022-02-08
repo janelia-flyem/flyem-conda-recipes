@@ -100,7 +100,7 @@ recipe-specs:
     recipe-subdir: scripts/conda-recipe
     tag: v0.9.15
     #tag: master
-    tag: stuart-test
+    #tag: stuart-test
     environment:
       GOMAXPROCS: 2
       DVID_CONDA_SKIP_TESTS: 1
