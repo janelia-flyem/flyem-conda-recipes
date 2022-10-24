@@ -98,7 +98,7 @@ recipe-specs:
   - name: dvid
     recipe-repo: https://github.com/janelia-flyem/dvid
     recipe-subdir: scripts/conda-recipe
-    tag: v0.9.16
+    tag: v0.9.17
     #tag: master
     #tag: stuart-test
     environment:
