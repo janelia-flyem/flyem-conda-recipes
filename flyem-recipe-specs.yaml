@@ -11,6 +11,7 @@
 shared-config:
   master-conda-build-config: master-conda-build-config.yaml
   repo-cache-dir: ./repo-cache # Relative to this yaml file's directory.
+  backend: mamba
 
   source-channels:
     - flyem-forge
@@ -113,7 +114,10 @@ recipe-specs:
   - name: libdvid-cpp
     recipe-repo: https://github.com/janelia-flyem/libdvid-cpp
     tag: master
+    #tag: address-sanitizer
     recipe-subdir: conda-recipe
+    environment:
+      SKIP_LIBDVID_TESTS: 1
 
   - name: lowtis
     recipe-repo: https://github.com/janelia-flyem/lowtis
