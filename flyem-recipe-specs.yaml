@@ -159,7 +159,7 @@ recipe-specs:
 
   - name: marching_cubes
     recipe-repo: https://github.com/ilastik/marching_cubes
-    tag: 0.2
+    tag: 1a4aa175cd24c76ae50a49ee05be625678f2d384  # 2022-11-09
     recipe-subdir: conda-recipe
 
   - name: fq-mesh-simplification
