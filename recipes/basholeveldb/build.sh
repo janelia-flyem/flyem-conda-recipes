@@ -6,6 +6,10 @@ else
     EXT=so
 fi
 
+# The basholeveldb source code uses std:auto_ptr, which was removed in c++17.
+# We have to use an older c++ standard.
+export CXXFLAGS="${CXXFLAGS} -std=c++11"
+
 # Build
 make
 
