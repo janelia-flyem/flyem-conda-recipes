@@ -26,13 +26,14 @@ source:
   
 
 build:
-  number: 1
+  number: 2
   
   script_env:
     - CMAKE_BUILD_TYPE
 
 requirements:
   build:
+    - make
     - cmake
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
