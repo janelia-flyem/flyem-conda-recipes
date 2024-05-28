@@ -14,27 +14,52 @@
 # https://github.com/conda-forge/conda-forge-pinning-feedstock/blob/master/recipe/conda_build_config.yaml
 
 boost:
-  - 1.78.0
+  - 1.82.0
 boost_cpp:
-  - 1.78.0
+  - 1.82.0
 hdf5:
-  - 1.12.1
+  - 1.14.3
 jsoncpp:
   - 1.9.5
 librdkafka:
-  - '1.9'
+  - '2.2'
 lz4:
-  - 3
+  - 4
 lz4_c:
   - 1.9.3
 numpy:
-  - 1.21
+  #- 1.21  # For python 3.10
+  #- 1.22.0  # For python 3.10
+  #- 1.23  # Earliest numpy for py3.11
+  - 1.26
 python:
-  - 3.10
+  #- 3.10.* *_cpython
+  #- 3.11.* *_cpython
+  - 3.12.* *_cpython
 python_impl:
   - cpython
 zeromq:
-  - 4.3.4
+  - 4.3.5
+
+# Notes:
+# py310/np1.21.6: pass
+
+# py310/np1.22.0: fail (required setting test env to np1.22.0)
+# py310/np1.22.4: fail
+
+# py310/np1.23: fail
+
+# py311/np1.23: fail
+# py312/np1.26: fail (with newer xtensor, but that probably doesn't matter)
+
+
+# conda-forge uses these zip_keys, so we do it here even though
+# it's not necessary since we only use a single version of each.
+zip_keys:
+  -
+    - python
+    - numpy
+    - python_impl
 
 pin_run_as_build:
   boost:
@@ -61,18 +86,17 @@ CONDA_BUILD_SYSROOT:
   # but golang-1.16 requires at least MacOSX 10.13.
   # (See the download page: https://go.dev/dl/)
   #
-  # You will have to install this SDK manually, via this project:
+  # The simplest thing to do is to download the SDK from the release page in this repo:
+  # https://github.com/phracker/MacOSX-SDKs
+  # https://github.com/phracker/MacOSX-SDKs/releases
   #
-  #   https://github.com/devernay/xcodelegacy
-  #
-  # Quick Instructions:
-  #
-  #   curl https://raw.githubusercontent.com/devernay/xcodelegacy/master/XcodeLegacy.sh > XcodeLegacy.sh
-  #   chmod +x XcodeLegacy.sh
-  #   sudo ./XcodeLegacy.sh -osx1013 buildpackages
-  #   sudo ./XcodeLegacy.sh -osx1013 install
-  #
-  - /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk
+  # Previously, we would use the XcodeLegacy script, via the following project,
+  # but it doesn't seem to work with new versions of Xcode.
+  # https://github.com/devernay/xcodelegacy
 
-MACOSX_DEPLOYMENT_TARGET:
-  - 10.13
+  #- /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk
+  - /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk
+
+# MACOSX_DEPLOYMENT_TARGET:
+#   - 10.13
+

@@ -11,7 +11,7 @@
 shared-config:
   master-conda-build-config: master-conda-build-config.yaml
   repo-cache-dir: ./repo-cache # Relative to this yaml file's directory.
-  backend: mamba
+  backend: conda
 
   source-channels:
     - flyem-forge
@@ -54,7 +54,7 @@ recipe-specs:
   - name: ilastikrag
     #recipe-repo: https://github.com/stuarteberg/ilastikrag
     recipe-repo: https://github.com/ilastik/ilastikrag
-    tag: master
+    tag: main
     recipe-subdir: conda-recipe
 
   - name: neuprint-python
@@ -99,16 +99,18 @@ recipe-specs:
   - name: dvid
     recipe-repo: https://github.com/janelia-flyem/dvid
     recipe-subdir: scripts/conda-recipe
-    tag: v0.9.17
-    #tag: master
-    #tag: stuart-test
+    #tag: v1.0.0
+    tag: master
+    #tag: conda-recipe-fix
     environment:
+      DVID_BACKENDS: badger basholeveldb filestore ngprecomputed
       GOMAXPROCS: 2
       DVID_CONDA_SKIP_TESTS: 1
 
   - name: dvidutils
-    recipe-repo: https://github.com/stuarteberg/dvidutils
+    recipe-repo: https://github.com/janelia-flyem/dvidutils
     tag: master
+    #tag: debug-build
     recipe-subdir: conda-recipe
 
   - name: libdvid-cpp
@@ -153,6 +155,12 @@ recipe-specs:
 
   - name: neuclease
     recipe-repo: https://github.com/janelia-flyem/neuclease
+    tag:  master
+    recipe-subdir: conda-recipe
+    conda-build-flags: --no-test
+
+  - name: flyem-snapshot
+    recipe-repo: https://github.com/janelia-flyem/flyem-snapshot
     tag:  master
     recipe-subdir: conda-recipe
     conda-build-flags: --no-test
