@@ -17,6 +17,8 @@ libboost_devel:
   - '1.86'
 libboost_python_devel:
   - '1.86'
+libdeflate:
+  - '1.22'
 libpng:
   - '1.6'
 hdf5:
