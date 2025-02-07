@@ -176,6 +176,11 @@ recipe-specs:
     tag: master
     recipe-subdir: recipes/fq-mesh-simplification
 
+  - name: pyfqmr
+    recipe-repo: https://github.com/janelia-flyem/flyem-conda-recipes
+    tag: master
+    recipe-subdir: recipes/pyfqmr
+
   - name: vol2mesh
     recipe-repo: https://github.com/janelia-flyem/vol2mesh
     tag: master
