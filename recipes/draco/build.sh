@@ -16,6 +16,7 @@ fi
 cmake .. \
     -Wno-dev \
     -DCMAKE_BUILD_TYPE="${CMAKE_BUILD_TYPE}" \
+    -DCMAKE_OSX_ARCHITECTURES="$(uname -m)" \
     -DBUILD_SHARED_LIBS="ON" \
     -DCMAKE_CXX_FLAGS="${CMAKE_CXX_FLAGS}" \
     -DCMAKE_OSX_DEPLOYMENT_TARGET=10.9 \
