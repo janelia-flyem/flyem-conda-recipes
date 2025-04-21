@@ -13,11 +13,11 @@ source:
     - assimp.patch
 
 build:
-  number: 2
+  number: 3
 
 requirements:
   build:
-    - cmake
+    - cmake 3
     - ninja
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
