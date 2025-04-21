@@ -10,6 +10,7 @@ if [ `uname` = "Darwin" ]; then
     SCREEN_ARGS=(
         "-DCMAKE_OSX_DEPLOYMENT_TARGET=10.10"
         "-DCMAKE_CXX_FLAGS:STRING=${CMAKE_CXX_FLAGS} -stdlib=libc++ -std=c++11"
+        "-DCMAKE_OSX_ARCHITECTURES=$(uname -m)"
     )
 else
 	# We need /usr/include for GL/glx.h
