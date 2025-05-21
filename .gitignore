@@ -6,3 +6,7 @@
 *.zip
 *.app
 repo-cache/
+
+# pixi environments
+.pixi
+*.egg-info

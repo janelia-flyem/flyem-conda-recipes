@@ -1,0 +1,17 @@
+[workspace]
+authors = ["Stuart Berg <bergs@janelia.hhmi.org>"]
+channels = ["ilastik-forge", "conda-forge"]
+name = "conda-build"
+platforms = ["osx-arm64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+conda-build = ">=25.3.2,<26"
+python = "3.12.*"
+cmake = ">=4.0.1,<5"
+conda-smithy = ">=3.47.1,<4"
+anaconda-client = ">=1.13.0,<2"
+versioneer = ">=0.29,<0.30"
+publish-conda-stack = ">=0.6.0,<0.7"

@@ -51,11 +51,11 @@ recipe-specs:
     tag: master
     recipe-subdir: conda-recipe
 
-  - name: ilastikrag
-    #recipe-repo: https://github.com/stuarteberg/ilastikrag
-    recipe-repo: https://github.com/ilastik/ilastikrag
-    tag: main
-    recipe-subdir: conda-recipe
+  # - name: ilastikrag
+  #   #recipe-repo: https://github.com/stuarteberg/ilastikrag
+  #   recipe-repo: https://github.com/ilastik/ilastikrag
+  #   tag: main
+  #   recipe-subdir: conda-recipe
 
   - name: neuprint-python
     recipe-repo: https://github.com/connectome-neuprint/neuprint-python
@@ -68,10 +68,10 @@ recipe-specs:
     tag: master
     recipe-subdir: conda-recipe
 
-  - name: numpy-allocation-tracking
-    recipe-repo: https://github.com/stuarteberg/numpy-allocation-tracking
-    tag: master
-    recipe-subdir: conda-recipe
+  # - name: numpy-allocation-tracking
+  #   recipe-repo: https://github.com/stuarteberg/numpy-allocation-tracking
+  #   tag: master
+  #   recipe-subdir: conda-recipe
 
   # conda-forge now has draco 1.3.4 and 1.3.5,
   # but we aren't yet sure if those work.
@@ -92,10 +92,10 @@ recipe-specs:
     recipe-subdir: recipes/dvid-web-console
     tag: master
 
-  - name: go
-    recipe-repo: https://github.com/janelia-flyem/flyem-conda-recipes
-    recipe-subdir: recipes/go
-    tag: master
+  # - name: go
+  #   recipe-repo: https://github.com/janelia-flyem/flyem-conda-recipes
+  #   recipe-subdir: recipes/go
+  #   tag: master
 
   - name: dvid
     recipe-repo: https://github.com/janelia-flyem/dvid
@@ -110,13 +110,13 @@ recipe-specs:
 
   - name: dvidutils
     recipe-repo: https://github.com/janelia-flyem/dvidutils
-    tag: master
+    tag: devel
     #tag: debug-build
     recipe-subdir: conda-recipe
 
   - name: libdvid-cpp
     recipe-repo: https://github.com/janelia-flyem/libdvid-cpp
-    tag: master
+    tag: devel
     #tag: address-sanitizer
     recipe-subdir: conda-recipe
     environment:
@@ -124,39 +124,39 @@ recipe-specs:
 
   - name: lowtis
     recipe-repo: https://github.com/janelia-flyem/lowtis
-    tag: master
+    tag: devel
     recipe-subdir: conda-recipe
 
-  # FIXME: Switch to master fork when ready.
-  - name: fastfilters
-    recipe-repo: https://github.com/stuarteberg/fastfilters
-    tag:  compiler-switch # Dominik's branch.  See https://github.com/svenpeter42/fastfilters/pull/21
-    recipe-subdir: pkg/conda/fastfilters
+  # # FIXME: Switch to master fork when ready.
+  # - name: fastfilters
+  #   recipe-repo: https://github.com/stuarteberg/fastfilters
+  #   tag:  compiler-switch # Dominik's branch.  See https://github.com/svenpeter42/fastfilters/pull/21
+  #   recipe-subdir: pkg/conda/fastfilters
 
-  - name: nifty
-    # FIXME: This is Dominik's branch, and not even the main one.
-    #tag: quickfix-conda-recipe # Dominik's quickfix branch, but rebased on master
-    #recipe-repo: https://github.com/constantinpape/nifty
-    #tag: v1.0.7
+  # - name: nifty
+  #   # FIXME: This is Dominik's branch, and not even the main one.
+  #   #tag: quickfix-conda-recipe # Dominik's quickfix branch, but rebased on master
+  #   #recipe-repo: https://github.com/constantinpape/nifty
+  #   #tag: v1.0.7
 
-    # Same as constantin's current master, but with conda-recipe fixes.
-    recipe-repo: https://github.com/stuarteberg/nifty
-    tag: v1.0.7.1
-    recipe-subdir: conda-recipe
+  #   # Same as constantin's current master, but with conda-recipe fixes.
+  #   recipe-repo: https://github.com/stuarteberg/nifty
+  #   tag: v1.0.7.1
+  #   recipe-subdir: conda-recipe
 
   - name: dvidtools
     recipe-repo: https://github.com/janelia-flyem/flyem-conda-recipes
     tag:  master
     recipe-subdir: recipes/dvidtools
 
-  - name: marktips
-    recipe-repo: https://github.com/janelia-flyem/marktips
-    tag:  master
-    recipe-subdir: conda-recipe
+  # - name: marktips
+  #   recipe-repo: https://github.com/janelia-flyem/marktips
+  #   tag:  master
+  #   recipe-subdir: conda-recipe
 
   - name: neuclease
     recipe-repo: https://github.com/janelia-flyem/neuclease
-    tag:  master
+    tag:  develop
     recipe-subdir: conda-recipe
     conda-build-flags: --no-test
 
@@ -166,15 +166,15 @@ recipe-specs:
     recipe-subdir: conda-recipe
     conda-build-flags: --no-test
 
-  - name: marching_cubes
-    recipe-repo: https://github.com/ilastik/marching_cubes
-    tag: 1a4aa175cd24c76ae50a49ee05be625678f2d384  # 2022-11-09
-    recipe-subdir: conda-recipe
+  # - name: marching_cubes
+  #   recipe-repo: https://github.com/ilastik/marching_cubes
+  #   tag: 1a4aa175cd24c76ae50a49ee05be625678f2d384  # 2022-11-09
+  #   recipe-subdir: conda-recipe
 
-  - name: fq-mesh-simplification
-    recipe-repo: https://github.com/janelia-flyem/flyem-conda-recipes
-    tag: master
-    recipe-subdir: recipes/fq-mesh-simplification
+  # - name: fq-mesh-simplification
+  #   recipe-repo: https://github.com/janelia-flyem/flyem-conda-recipes
+  #   tag: master
+  #   recipe-subdir: recipes/fq-mesh-simplification
 
   - name: pyfqmr
     recipe-repo: https://github.com/janelia-flyem/flyem-conda-recipes
@@ -188,7 +188,7 @@ recipe-specs:
 
   - name: flyemflows
     recipe-repo: https://github.com/janelia-flyem/flyemflows
-    tag: master
+    tag: develop
     recipe-subdir: conda-recipe
     conda-build-flags: --no-test
 
