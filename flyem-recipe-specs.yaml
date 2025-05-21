@@ -110,13 +110,13 @@ recipe-specs:
 
   - name: dvidutils
     recipe-repo: https://github.com/janelia-flyem/dvidutils
-    tag: devel
+    tag: master
     #tag: debug-build
     recipe-subdir: conda-recipe
 
   - name: libdvid-cpp
     recipe-repo: https://github.com/janelia-flyem/libdvid-cpp
-    tag: devel
+    tag: master
     #tag: address-sanitizer
     recipe-subdir: conda-recipe
     environment:
@@ -124,7 +124,7 @@ recipe-specs:
 
   - name: lowtis
     recipe-repo: https://github.com/janelia-flyem/lowtis
-    tag: devel
+    tag: master
     recipe-subdir: conda-recipe
 
   # # FIXME: Switch to master fork when ready.
@@ -156,7 +156,7 @@ recipe-specs:
 
   - name: neuclease
     recipe-repo: https://github.com/janelia-flyem/neuclease
-    tag:  develop
+    tag:  master
     recipe-subdir: conda-recipe
     conda-build-flags: --no-test
 
@@ -188,7 +188,7 @@ recipe-specs:
 
   - name: flyemflows
     recipe-repo: https://github.com/janelia-flyem/flyemflows
-    tag: develop
+    tag: master
     recipe-subdir: conda-recipe
     conda-build-flags: --no-test
 
